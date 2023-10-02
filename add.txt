@@ -1,0 +1,10 @@
+https://docs.nextcloud.com/server/27/admin_manual/installation/harden_server.html
+
+This can be achieved by setting the following settings within the Apache VirtualHost file:
+
+<VirtualHost *:443>
+  ServerName cloud.nextcloud.com
+    <IfModule mod_headers.c>
+      Header always set Strict-Transport-Security "max-age=15552000; includeSubDomains"
+    </IfModule>
+ </VirtualHost>
